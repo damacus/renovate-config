@@ -45,6 +45,19 @@
         "commitMessageTopic": "{{{groupName}}} group"
       },
       "separateMinorPatch": true
+    },
+    {
+      "description": ["kube-prometheus-stack Group"],
+      "groupName": "kube-prometheus-stack",
+      "matchPackagePatterns": [
+        "kube-prometheus-stack",
+        "prometheus-operator-crds"
+      ],
+      "matchDatasources": ["docker", "github-tags"],
+      "group": {
+        "commitMessageTopic": "{{{groupName}}} group"
+      },
+      "separateMinorPatch": true
     }
   ]
 }
