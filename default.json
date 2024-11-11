@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "config:best-practices",
+    "docker:enableMajor",
+    ":disableRateLimiting",
+    ":semanticCommits",
+    ":automergeBranch",
+    ":rebaseStalePrs"
+  ],
+  "dependencyDashboardTitle": "Renovate Dashboard 🤖",
+  "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
+  "schedule": ["on saturday"],
+  "ignorePaths": [".archive/**"],
+  "flux": {
+    "fileMatch": [
+      "(^|/)ansible/.+\\.ya?ml(\\.j2)?$",
+      "(^|/)kubernetes/.+\\.ya?ml(\\.j2)?$"
+    ]
+  },
+  "helm-values": {
+    "fileMatch": [
+      "(^|/)ansible/.+\\.ya?ml(\\.j2)?$",
+      "(^|/)kubernetes/.+\\.ya?ml(\\.j2)?$"
+    ]
+  },
+  "kubernetes": {
+    "fileMatch": [
+      "(^|/)ansible/.+\\.ya?ml(\\.j2)?$",
+      "(^|/)kubernetes/.+\\.ya?ml(\\.j2)?$"
+    ]
+  },
+  "kustomize": {
+    "fileMatch": ["(^|/)kustomization\\.ya?ml(\\.j2)?$"]
+  },
+  "pip_requirements": {
+    "fileMatch": ["(^|/)[\\w-]*requirements(-\\w+)?\\.(txt|pip)(\\.j2)?$"]
+  },
+  "ansible-galaxy": {
+    "fileMatch": ["(^|/)(galaxy|requirements)(\\.ansible)?\\.ya?ml(\\.j2)?$"]
+  }
+}
