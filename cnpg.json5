@@ -3,7 +3,7 @@
   packageRules: [
     {
       matchDatasources: ["docker"],
-      matchPackagePatterns: ["postgresql"],
+      matchPackagePatterns: ["postgresql","ghcr.io/cloudnative-pg/postgresql"],
       allowedVersions: "<=17", //  Online major upgrade are not yet supported and I'm too lazy https://github.com/cloudnative-pg/cloudnative-pg/issues/4682
     },
   ],
