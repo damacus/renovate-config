@@ -4,7 +4,6 @@
     "docker:enableMajor",
     ":disableRateLimiting",
     ":semanticCommits",
-    ":automergeBranch",
     ":rebaseStalePrs"
   ],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
