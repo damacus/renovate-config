@@ -4,7 +4,8 @@
     "docker:enableMajor",
     ":disableRateLimiting",
     ":semanticCommits",
-    ":rebaseStalePrs"
+    ":rebaseStalePrs",
+    ":automergePr"
   ],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
