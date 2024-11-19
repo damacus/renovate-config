@@ -9,7 +9,7 @@
   ],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
-  "schedule": ["on saturday"],
+  "schedule": ["daily"],
   "ignorePaths": [".archive/**"],
   "flux": {
     "fileMatch": [
@@ -33,9 +33,11 @@
     "fileMatch": ["(^|/)kustomization\\.ya?ml(\\.j2)?$"]
   },
   "pip_requirements": {
-    "fileMatch": ["(^|/)[\\w-]*requirements(-\\w+)?\\.(txt|pip)(\\.j2)?$"]
-  },
-  "ansible-galaxy": {
-    "fileMatch": ["(^|/)(galaxy|requirements)(\\.ansible)?\\.ya?ml(\\.j2)?$"]
+    "fileMatch": ["(^|/)[\\w-]*requirements(-\\w+)?\\.(txt|pip)(\\.j2)?$"],
+    "automerge": true
+},
+"ansible-galaxy": {
+	"fileMatch": ["(^|/)(galaxy|requirements)(\\.ansible)?\\.ya?ml(\\.j2)?$"],
+	"automerge": true
   }
 }
