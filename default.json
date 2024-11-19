@@ -9,7 +9,7 @@
   ],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
-  "schedule": ["daily"],
+  "schedule": ["after 9am every weekday", "before 5pm every weekday"],
   "ignorePaths": [".archive/**"],
   "flux": {
     "fileMatch": [
