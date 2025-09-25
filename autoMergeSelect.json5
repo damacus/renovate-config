@@ -27,6 +27,22 @@
 	  "automerge": true,
 	  "automergeType": "branch",
 	  "matchUpdateTypes": ["minor", "patch", "digest"]
+	},
+	{
+	  "description": ["Auto merge n8n"],
+	  "matchPackagePatterns": ["n8n"],
+	  "matchDatasources": ["docker", "github-tags"],
+	  "automerge": true,
+	  "automergeType": "branch",
+	  "matchUpdateTypes": ["minor", "patch", "digest"]
+	},
+	{
+	  "description": ["Auto merge kube-prometheus-stack"],
+	  "matchPackagePatterns": ["kube-prometheus-stack"],
+	  "matchDatasources": ["docker", "github-tags"],
+	  "automerge": true,
+	  "automergeType": "branch",
+	  "matchUpdateTypes": ["minor", "patch", "digest"]
 	}
   ]
 }
