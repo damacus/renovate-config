@@ -1,6 +1,8 @@
 {
   "extends": [
-    "config:best-practices",
+    "config:recommended",
+    ":configMigration",
+    "abandonments:recommended",
     "docker:enableMajor",
     ":disableRateLimiting",
     ":semanticCommits",
@@ -39,5 +41,11 @@
   "ansible-galaxy": {
     "fileMatch": ["(^|/)(galaxy|requirements)(\\.ansible)?\\.ya?ml(\\.j2)?$"],
     "automerge": true
-  }
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["oci"],
+      "pinDigests": false
+    }
+  ]
 }

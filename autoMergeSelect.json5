@@ -2,47 +2,37 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "description": ["Auto merge kube-prometheus-stack group"],
-      "matchPackagePatterns": [
-        "kube-prometheus-stack",
-        "prometheus-operator-crds"
-      ],
-      "matchDatasources": ["docker", "github-tags"],
-      "automerge": true,
-      "automergeType": "branch",
-      "matchUpdateTypes": ["minor", "patch", "digest"]
+      description: "Auto-merge KPS & Grafana OCI Charts",
+      matchDatasources: ["docker"],
+      automerge: true,
+      automergeType: "pr",
+      matchUpdateTypes: ["minor", "patch"],
+      matchPackageNames: ["/kube-prometheus-stack/", "/grafana/"],
+      ignoreTests: false,
     },
 	{
-	  "description": ["Auto merge ESPHome"],
-	  "matchPackagePatterns": ["esphome"],
-	  "matchDatasources": ["docker", "github-tags"],
-	  "automerge": true,
-	  "automergeType": "branch",
-	  "matchUpdateTypes": ["minor", "patch", "digest"]
+	  description: "Auto-merge ESPHome",
+	  matchPackagePatterns: ["esphome"],
+	  matchDatasources: ["docker", "github-tags"],
+	  automerge: true,
+	  automergeType: "branch",
+	  matchUpdateTypes: ["minor", "patch", "digest"]
 	},
 	{
-	  "description": ["Auto merge Redis"],
-	  "matchPackagePatterns": ["redis"],
-	  "matchDatasources": ["docker", "github-tags"],
-	  "automerge": true,
-	  "automergeType": "branch",
-	  "matchUpdateTypes": ["minor", "patch", "digest"]
+	  description: "Auto-merge Redis",
+	  matchPackagePatterns: ["redis"],
+	  matchDatasources: ["docker", "github-tags"],
+	  automerge: true,
+	  automergeType: "branch",
+	  matchUpdateTypes: ["minor", "patch", "digest"]
 	},
 	{
-	  "description": ["Auto merge n8n"],
-	  "matchPackagePatterns": ["n8n"],
-	  "matchDatasources": ["docker", "github-tags"],
-	  "automerge": true,
-	  "automergeType": "branch",
-	  "matchUpdateTypes": ["minor", "patch", "digest"]
-	},
-	{
-	  "description": ["Auto merge kube-prometheus-stack"],
-	  "matchPackagePatterns": ["kube-prometheus-stack"],
-	  "matchDatasources": ["docker", "github-tags"],
-	  "automerge": true,
-	  "automergeType": "branch",
-	  "matchUpdateTypes": ["minor", "patch", "digest"]
+	  description: "Auto-merge n8n",
+	  matchPackagePatterns: ["n8n"],
+	  matchDatasources: ["docker", "github-tags"],
+	  automerge: true,
+	  automergeType: "branch",
+	  matchUpdateTypes: ["minor", "patch", "digest"]
 	}
   ]
 }
